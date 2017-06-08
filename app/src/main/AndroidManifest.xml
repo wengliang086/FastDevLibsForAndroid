@@ -27,6 +27,10 @@
             android:name=".toolbarandtitle.functions.ToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".toolbarandtitle.functions.TitleActivity" />
+        <activity
+            android:name=".toolbarandtitle.functions.TestTopBarBaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".toolbarandtitle.functions.TestBottomTabBaseActivity" />
     </application>
 
 </manifest>

@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.mytest.fastdev.FunModule;
 import com.mytest.fastdev.R;
+import com.mytest.fastdev.toolbarandtitle.functions.TestBottomTabBaseActivity;
+import com.mytest.fastdev.toolbarandtitle.functions.TestTopBarBaseActivity;
 import com.mytest.fastdev.toolbarandtitle.functions.TitleActivity;
 import com.mytest.fastdev.toolbarandtitle.functions.ToolbarActivity;
 
@@ -61,6 +63,8 @@ public class FunctionListActivity_ToolBar_Title extends AppCompatActivity {
     private void initDatas() {
         funModuleList.add(new FunModule("TitleActivity", TitleActivity.class));
         funModuleList.add(new FunModule("ToolbarActivity", ToolbarActivity.class));
+        funModuleList.add(new FunModule("TestTopBarBaseActivity", TestTopBarBaseActivity.class));
+        funModuleList.add(new FunModule("TestBottomTabBaseActivity", TestBottomTabBaseActivity.class));
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
