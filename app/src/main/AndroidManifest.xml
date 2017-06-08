@@ -19,9 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewpager.FunctionListActivity" />
+        <activity android:name=".toolbarandtitle.FunctionListActivity_ToolBar_Title" />
         <activity
             android:name=".viewpager.functions.TabActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".toolbarandtitle.functions.ToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".toolbarandtitle.functions.TitleActivity" />
     </application>
 
 </manifest>

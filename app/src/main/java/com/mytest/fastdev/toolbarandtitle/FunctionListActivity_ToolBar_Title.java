@@ -1,4 +1,4 @@
-package com.mytest.fastdev;
+package com.mytest.fastdev.toolbarandtitle;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mytest.fastdev.toolbarandtitle.FunctionListActivity_ToolBar_Title;
-import com.mytest.fastdev.viewpager.FunctionListActivity;
+import com.mytest.fastdev.FunModule;
+import com.mytest.fastdev.R;
+import com.mytest.fastdev.toolbarandtitle.functions.TitleActivity;
+import com.mytest.fastdev.toolbarandtitle.functions.ToolbarActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class FunctionListActivity_ToolBar_Title extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private List<FunModule> funModuleList = new ArrayList<>();
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new RecyclerView.Adapter<MyViewHolder>() {
             @Override
             public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View rootView = LayoutInflater.from(MainActivity.this).inflate(R.layout.item_function, parent, false);
+                View rootView = LayoutInflater.from(FunctionListActivity_ToolBar_Title.this).inflate(R.layout.item_function, parent, false);
                 return new MyViewHolder(rootView);
             }
 
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(MainActivity.this, m.getActivityClass()));
+                        startActivity(new Intent(FunctionListActivity_ToolBar_Title.this, m.getActivityClass()));
                     }
                 });
             }
@@ -57,9 +59,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatas() {
-        funModuleList.add(new FunModule("ViewPager", FunctionListActivity.class));
-        funModuleList.add(new FunModule("RecycleView", FunctionListActivity.class));
-        funModuleList.add(new FunModule("ToolBarAndTitle", FunctionListActivity_ToolBar_Title.class));
+        funModuleList.add(new FunModule("TitleActivity", TitleActivity.class));
+        funModuleList.add(new FunModule("ToolbarActivity", ToolbarActivity.class));
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
@@ -71,5 +72,4 @@ public class MainActivity extends AppCompatActivity {
             textView = (TextView) itemView.findViewById(R.id.section_label);
         }
     }
-
 }
