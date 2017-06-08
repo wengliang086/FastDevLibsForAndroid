@@ -31,6 +31,10 @@
             android:name=".toolbarandtitle.functions.TestTopBarBaseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".toolbarandtitle.functions.TestBottomTabBaseActivity" />
+        <activity android:name=".recycleview.FunctionListActivity_RecycleView" />
+        <activity
+            android:name=".recycleview.functions.TransformRecycleView"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

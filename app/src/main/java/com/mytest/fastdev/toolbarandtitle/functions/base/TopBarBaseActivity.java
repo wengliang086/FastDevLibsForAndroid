@@ -83,6 +83,7 @@ public abstract class TopBarBaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
         if (menuResId != 0 || !TextUtils.isEmpty(menuStr)) {
             getMenuInflater().inflate(R.menu.menu_activity_base_top_bar, menu);
         }
@@ -108,5 +109,16 @@ public abstract class TopBarBaseActivity extends AppCompatActivity {
             onClickListenerTopRight.onClick();
         }
         return true; // true 告诉系统我们自己处理了点击事件
+    }
+
+    Menu menu;
+
+    /**
+     * 更换右边图标
+     *
+     * @param menuResId
+     */
+    public void updateMenuItemIcon(int menuResId) {
+        menu.findItem(R.id.menu_1).setIcon(menuResId);
     }
 }
