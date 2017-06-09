@@ -29,5 +29,7 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'com.kelin.scrollablepanel:library:1.2.0'
+    compile 'de.codecrafters.tableview:tableview:2.6.0'
     testCompile 'junit:junit:4.12'
 }

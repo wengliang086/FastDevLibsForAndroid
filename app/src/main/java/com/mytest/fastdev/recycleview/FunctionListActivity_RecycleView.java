@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.mytest.fastdev.FunModule;
 import com.mytest.fastdev.R;
+import com.mytest.fastdev.recycleview.functions.ScrollablePanelTestActivity;
+import com.mytest.fastdev.recycleview.functions.TableViewTestActivity;
 import com.mytest.fastdev.recycleview.functions.TransformRecycleView;
 
 import java.util.ArrayList;
@@ -59,6 +61,8 @@ public class FunctionListActivity_RecycleView extends AppCompatActivity {
 
     private void initDatas() {
         funModuleList.add(new FunModule("TransformRecycleView", TransformRecycleView.class));
+        funModuleList.add(new FunModule("ScrollablePanelTestActivity", ScrollablePanelTestActivity.class));
+        funModuleList.add(new FunModule("TableViewTestActivity", TableViewTestActivity.class));
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
