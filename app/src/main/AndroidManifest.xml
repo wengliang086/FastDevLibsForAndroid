@@ -38,7 +38,9 @@
         <activity
             android:name=".recycleview.functions.ScrollablePanelTestActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".recycleview.functions.TableViewTestActivity" />
+        <activity
+            android:name=".recycleview.functions.TableViewTestActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <de.codecrafters.tableview.TableView
+    <de.codecrafters.tableview.SortableTableView
         android:id="@+id/id_tableView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:tableView_columnCount="4" />
+        app:tableView_columnCount="4"
+        app:tableView_headerColor="@color/colorPrimary"
+        app:tableView_headerElevation="10" />
 </FrameLayout>
