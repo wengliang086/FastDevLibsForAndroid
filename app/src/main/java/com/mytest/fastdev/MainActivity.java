@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mytest.fastdev.phoneparameters.MobileHardwareActivity;
+import com.mytest.fastdev.phoneparameters.PhoneParamsActivity;
 import com.mytest.fastdev.recycleview.FunctionListActivity_RecycleView;
 import com.mytest.fastdev.toolbarandtitle.FunctionListActivity_ToolBar_Title;
 import com.mytest.fastdev.viewpager.FunctionListActivity;
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         funModuleList.add(new FunModule("ViewPager", FunctionListActivity.class));
         funModuleList.add(new FunModule("RecycleView", FunctionListActivity_RecycleView.class));
         funModuleList.add(new FunModule("ToolBarAndTitle", FunctionListActivity_ToolBar_Title.class));
+        funModuleList.add(new FunModule("手机硬件参数", PhoneParamsActivity.class));
+        funModuleList.add(new FunModule("手机硬件参数2", MobileHardwareActivity.class));
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {

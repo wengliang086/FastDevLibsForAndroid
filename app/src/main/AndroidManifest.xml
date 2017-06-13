@@ -41,6 +41,8 @@
         <activity
             android:name=".recycleview.functions.TableViewTestActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".phoneparameters.PhoneParamsActivity" />
+        <activity android:name=".phoneparameters.MobileHardwareActivity" />
     </application>
 
 </manifest>
