@@ -43,6 +43,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".phoneparameters.PhoneParamsActivity" />
         <activity android:name=".phoneparameters.MobileHardwareActivity" />
+        <activity android:name=".DatePickerActivity"></activity>
     </application>
 
 </manifest>

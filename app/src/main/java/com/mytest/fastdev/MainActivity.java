@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         funModuleList.add(new FunModule("ToolBarAndTitle", FunctionListActivity_ToolBar_Title.class));
         funModuleList.add(new FunModule("手机硬件参数", PhoneParamsActivity.class));
         funModuleList.add(new FunModule("手机硬件参数2", MobileHardwareActivity.class));
+        funModuleList.add(new FunModule("DatePickerActivity", DatePickerActivity.class));
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder {
