@@ -141,6 +141,7 @@ public class PhoneParamsActivity extends AppCompatActivity {
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     process.getInputStream()));
             String line = reader.readLine();
+            Log.i(TAG, "getCpuFrequence: " + line);
 //            return StringUtils.parseLongSafe(line, 10, 0);
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -267,7 +268,10 @@ public class PhoneParamsActivity extends AppCompatActivity {
         ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(mi);
         //mi.availMem; 当前系统的可用内存
-
+        Log.i(TAG, "availMem: " + Formatter.formatFileSize(getBaseContext(), mi.availMem));
+        Log.i(TAG, "totalMem: " + Formatter.formatFileSize(getBaseContext(), mi.totalMem));
+        Log.i(TAG, "threshold: " + Formatter.formatFileSize(getBaseContext(), mi.threshold));
+        Log.i(TAG, "lowMemory: " + mi.lowMemory);
         return Formatter.formatFileSize(getBaseContext(), mi.availMem);// 将获取的内存大小规格化
     }
 
@@ -316,7 +320,7 @@ public class PhoneParamsActivity extends AppCompatActivity {
             for (String num : arrayOfString) {
                 Log.i(str2, num + "/t");
             }
-            initial_memory = Integer.valueOf(arrayOfString[1]).intValue() * 1024;// 获得系统总内存，单位是KB，乘以1024转换为Byte
+            initial_memory = 3691644L * 1024;// 获得系统总内存，单位是KB，乘以1024转换为Byte
             localBufferedReader.close();
             return Formatter.formatFileSize(getBaseContext(), initial_memory);// Byte转换为KB或者MB，内存大小规格化
         } catch (Exception e) {
